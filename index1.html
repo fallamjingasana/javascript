@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>functions in js</title>
-
+        <title>methods</title>
     </head>
     <body>
-        <button onclick="myfunction(67)">Execute Js Functions</button>
         <script>
-            function myfunction(x,y){
-                if(y===undefined){
-                    y=2;
-                }
-                document.write(x*y);
-            }
+            var str ="JeReMy"
+            document.write(str.toUpperCase());
+            document.write("<br>");
+            document.write(str.toLocaleLowerCase());
+            document.write("<br>");
+            document.write(str.startsWith("i"));
         </script>
     </body>
 </html>

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Intro To Js
-        </title>
+        <title>Loops</title>
     </head>
     <body>
-        <p id="result"></p>
+        <p id="demo"></p>
         <script>
-            var a=5;
-            var b=6;
-            var sum=a+b;
-            document.getElementById("result").innerHTML=sum;
+            var planets= ["Earth","Mercury","Venus","Mars"];
+            var text="";
+            var i;
+            for (i=0;i <planets.length; i++){
+                text +=planets[i]+"<br>"
+            }
+            document.getElementById("demo").innerHTML= tex;
+
         </script>
     </body>
 </html>
