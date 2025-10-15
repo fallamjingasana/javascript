@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>methods</title>
-    </head>
+    <haed>
+        <title>Objects In Js</title>
+    </haed>
     <body>
+        <p id="demo"></p>
         <script>
-            var str ="JeReMy"
-            document.write(str.toUpperCase());
-            document.write("<br>");
-            document.write(str.toLocaleLowerCase());
-            document.write("<br>");
-            document.write(str.startsWith("i"));
+            var person ={
+                firstname:"john",
+                age: 10
+                
+            };
+            document.getElementById("demo").innerHTML=person.firstname+"is"+person.age;
         </script>
     </body>
 </html>

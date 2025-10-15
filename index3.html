@@ -1,56 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>swithes</title>
-
+        <title>Arguments</title>
     </head>
     <body>
-        <p id="demo"></p>
+        <p id="result"></p>
         <script>
-            
-            
-                var day;
-
-                switch (new Date().getDay()){
-                    case 0:
-
-                        day = "sunday";
-
-                        break;
-                        case 1:
-
-                        day = "monday";
-
-                        break;
-                        case 2:
-
-                        day = "Tuesday";
-
-                        break;
-                        case 3:
-
-                        day = "Wednesday";
-
-                        break;
-                        case 4:
-
-                        day = "Thursday";
-
-                        break;
-                        case 5:
-
-                        day = "friday";
-
-                        break;
-                        case 6:
-
-                        day = "saturday";
-
-                        break;
+            function findMax(){
+                var i;
+                var max=0;
+                for (i=0; i<arguments.length;i++){
+                    if (arguments[i]>max){
+                        max=arguments[i];
+                    }
                 }
-                document.getElementById("demo").innerHTML =day
-                
-            
+                return max;
+
+            }
+            document.getElementById("result").innerHTML=findMax(100,426,8);
         </script>
     </body>
 </html>
