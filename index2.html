@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-          external js
-        </title>
+        <title>map</title>
     </head>
     <body>
-     <button onclick="myfunction()">click me</button>
-     <p id="result"></p>
-     <script src="script.js"></script>
-     
+        <p id="result"></p>
+        <script>
+            var numbers =[10,20,30,40];
+            function myfunction(num){
+                return num*10;
+            }
+            var newarray =numbers.map(myfunction);
+            document.getElementById("result").innerHTML= newarray;
+        </script>
     </body>
 </html>
