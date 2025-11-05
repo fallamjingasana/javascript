@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>
+            type conversion
+        </title>
     </head>
     <body>
+        <p id="number_result"></p>
+        <p id="string_result"></p>
         <script>
-            alert("the page is not responding error code 2-W-@")
+            var x =20;
+            var y =30;
+            document.getElementById("number_result").innerHTML=x+y;
+            document.getElementById("string_result").innerHTML=String(x)+String(y);
         </script>
     </body>
 </html>

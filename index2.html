@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>map</title>
+        <title>
+            error handling
+        </title>
     </head>
     <body>
-        <p id="result"></p>
+        <p id="error_message"></p>
         <script>
-            var numbers =[10,20,30,40];
-            function myfunction(num){
-                return num*10;
+            try{
+                addalert("hello user");
             }
-            var newarray =numbers.map(myfunction);
-            document.getElementById("result").innerHTML= newarray;
+            catch(err){
+                document.getElementById("error_message").innerHTML=err.message;
+            }
         </script>
     </body>
 </html>
