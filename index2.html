@@ -2,18 +2,32 @@
 <html>
     <head>
         <title>
-            error handling
+         time bassed greeting
         </title>
     </head>
     <body>
-        <p id="error_message"></p>
+        <p id="hour"></p>
+        <p id="greet"></p>
+        <button onclick="myfunction()">click me</button>
         <script>
-            try{
-                addalert("hello user");
-            }
-            catch(err){
-                document.getElementById("error_message").innerHTML=err.message;
-            }
+            function myfunction(){
+                var greeting;
+                var time = new Date().getHours();
+
+                if(time<10){
+                    greeting="Good morning";
+                }
+                else if (time<20){
+                    greeting="Good Day";
+                }
+                else{
+                    greeting="good eavning";
+                }
+                document.getElementById("hour").innerHTML = time;
+                document.getElementById("greet").innerHTML = greeting;
+
+                }
+            
         </script>
     </body>
 </html>

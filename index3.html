@@ -2,14 +2,20 @@
 <html>
     <head>
         <title>
-            arrow function
+            vile loop
         </title>
     </head>
     <body>
         <p id="result"></p>
         <script>
-            add = (a,b) => a+b;
-            document.getElementById("result").innerHTML=add(5,4);
+            var text =""
+            var i = 0;
+            while(i<10){
+                text +="<br> the number is"+i;
+                i++;
+                
+            }
+            document.getElementById("result").innerHTML=text;
         </script>
     </body>
 </html>
