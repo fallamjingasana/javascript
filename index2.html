@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-         time bassed greeting
-        </title>
+        <title>Inheritence</title>
     </head>
     <body>
-        <p id="hour"></p>
-        <p id="greet"></p>
-        <button onclick="myfunction()">click me</button>
+        <p id="details"></p>
         <script>
-            function myfunction(){
-                var greeting;
-                var time = new Date().getHours();
-
-                if(time<10){
-                    greeting="Good morning";
+            class car{
+               constructor(brand){
+                this.brand=brand;
+               }
+               present(){
+                return "i have a"+this.brand;
+               } 
+            }
+            class model extends car{
+                constructor(brand,model){
+                    super(brand);
+                    this.model=model;
                 }
-                else if (time<20){
-                    greeting="Good Day";
+                show(){
+                    return this.present()+"it is a"+this.model;
                 }
-                else{
-                    greeting="good eavning";
-                }
-                document.getElementById("hour").innerHTML = time;
-                document.getElementById("greet").innerHTML = greeting;
-
-                }
-            
+            }
+            mycar = new model("Ford", "Mustang");
+                document.getElementById("details").innerHTML = mycar.show();
         </script>
     </body>
 </html>
