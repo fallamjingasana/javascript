@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>classes in js
-        </title>
+        <title>JSON</title>
     </head>
     <body>
-        <p id="student1"></p>
-        <p id="student2"></p>
+        <p id="result"></p>
         <script>
-            class student{
-                constructor(name,year){
-                    this.name=name;
-                    this.year=year;
-                }
-                age(){
-                    let date =new Date();
-                    return date.getFullYear() - this.year;
-                }
-
-             
-            }
-               student1 = new student("Jonathan", 2012);
-            document.getElementById("student1").innerHTML = "My name is: " + student1.name + "My age is: " + student1.age();
-
-            student2 = new student("jeremy", 2013);
-            document.getElementById("student2").innerHTML = "My name is: " + student2.name + "My age is: " + student2.age();
+            var myob = {name :"jerry" , age:12,grade:7};
+            var myjson=JSON.stringify(myob);
+            var newob=JSON.parse(myjson);
+            document.getElementById("result").innerHTML=newob.name;
         </script>
     </body>
 </html>

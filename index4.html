@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>callback</title>
+    </head>
+    <body>
+        <p id="result"></p>
+        <script>
+            function mydisplay(value){
+                document.getElementById("result").innerHTML=value;
+            }
+            function myCalculator(num1, num2, myCallback) {
+
+                    let sum = num1 + num2;
+
+                    myCallback(sum);
+
+                }
+
+
+                myCalculator(5, 5, mydisplay);
+        </script>
+    </body>
+</html>
