@@ -1,29 +1,28 @@
-function validate(e) {
-    e.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('password').value;
-    const age = document.getElementById('age').value;
-    const msgBox = document.getElementById('message');
-
-    let message = '';
-
-    if (email === '') {
-        message = 'Please enter an email.';
-        msgBox.style.color = 'red';
-    } else if (pass === '') {
-        message = 'Password must be at least 8 characters.';
-        msgBox.style.color = 'red';
-    } else if (age === '') {
-        message = 'Age must be between 12 and 50.';
-        msgBox.style.color = 'red';
-    }
-
-    else {
-        message = 'Login successful!';
-        msgBox.style.color = 'green';
-    }
-
-    msgBox.innerText = message;
+// Clears the calculator display
+function clearScreen() {
+    document.getElementById("result").value = "";
 }
 
+// Appends the clicked button's value to the display
+function setScreenValue(value) {
+    document.getElementById("result").value += value;
+}
+
+// Calculates and displays the result
+function calculateResult() {
+    const resultElement = document.getElementById("result");
+    const expression = resultElement.value.trim();
+
+    // Check for empty input
+    if (expression === '') {
+        resultElement.value = 'Enter an expression';
+        return;
+    }
+
+    // Evaluate expression and handle errors
+    try {
+        resultElement.value = eval(expression);
+    } catch (e) {
+        resultElement.value = 'Invalid expression';
+    }
+}
