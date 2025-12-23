@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>footer in Js</title>
-        <link rel="stylesheet" href="style.css">
+        <title></title>
+        <style>
+            body{
+                margin : 0;
+                font-family: monospace;
+            }
+            .topnav{
+                overflow: hidden;
+                background-color: beige;
+            }
+            .topnav a{
+                float: left;
+                color: cadetblue;
+                text-align: center;
+                padding: 14px 16px; 
+                font-size: 17px;
+            }
+            .topnav a:hover{
+                background-color: burlywood;
+                color: blueviolet;
+            }
+            .topnav a.active{
+                background-color: crimson;
+                color: aliceblue;
+            }
+        </style>
     </head>
     <body>
-        <h3>my website content</h3>
-        <p>this is the main content of the website</p>
-        <div class="footer">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Codingal is on a mission to make kids fall in love with coding</p>
-            
-            </div>
-                <div class="footer-section">
-                    <h3>Quick links</h3>
-                    <ul>
-                    
-                        <li><a href="#">Home</a></li>
-                    
-                        <li><a href="#">Courses</a></li>
-                    
-                        <li><a href="#">About</a></li>
-                    
-                        <li><a href="#">Contact</a></li>
-                    
-                    </ul>
-                </div>
-                <div footer="footer-section">
-                    <h3>contact us</h3>
-                    <p>Email:info@example.com</p>
-                    <p>phone number:254667176</p>
-                </div>
-                <div class="footer-section">
-                    <h3>news letter</h3>
-                    <p>subscribe to get updates</p>
-                    <input type="email">
-                    <button>subscribe</button>
-                </div>
-                <div class="footer-bottom">
-                    @2025 my website
-                    <a>back to top</a>
-                </div>
+        <div class="topnav">
+        
+            <a href="#" class="active">Home</a>
+        
+            <a href="#">About us</a>
+        
+            <a href="#">Gallery</a>
+        
+            <a href="#">Contact Us</a>
+        
         </div>
-        
-            
-        
+        <section><img src="pic 3.jpg" class="myslides" height="400px" width="700px">
+            <img src="uranus.jpg" class="myslides" height="400px" width="700px">
+        </section>
+        <script>
+
+            var myindex = 0;
+
+            carousel();
+
+            function carousel() {
+
+                var i;
+
+                var x = document.getElementsByClassName("myslides");
+
+                for (i = 0; i < x.length; i++) {
+
+                    x[i].style.display = "none";
+
+                }
+
+                myindex++;
+
+                if (myindex > x.length) { myindex = 1 };
+
+                x[myindex - 1].style.display = "block";
+
+                setTimeout(carousel, 3000);
+
+            }
+
+        </script>
     </body>
 </html>
